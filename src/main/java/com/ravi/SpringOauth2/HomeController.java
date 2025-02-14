@@ -13,7 +13,7 @@ public class HomeController {
 
     @GetMapping("/hello")
     public String greet(@AuthenticationPrincipal OAuth2User user) {
-        return user.getAttributes().get("name") + "Hello";
+        return user.getAttributes().get("name") + " Hello " + user.getAttributes().get("email");
     }
 
 //    @GetMapping("/user/h")
